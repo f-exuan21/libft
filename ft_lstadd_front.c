@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/22 15:54:40 by abang             #+#    #+#             */
-/*   Updated: 2020/12/23 15:51:02 by abang            ###   ########.fr       */
+/*   Created: 2020/12/23 16:05:35 by abang             #+#    #+#             */
+/*   Updated: 2020/12/23 16:43:03 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
-int		ft_isalpha(int c)
+void	ft_lstadd_front(t_list **list, t_list *new)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	if (list == 0 || new == 0)
+		return (0);
+	new->next = *list;
+	*list = new;
 }
