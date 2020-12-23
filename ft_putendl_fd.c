@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 15:35:14 by abang             #+#    #+#             */
-/*   Updated: 2020/12/23 15:36:17 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/23 17:58:33 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	fd_putstr_fd(s, fd);
-	write(s, "\n", 1);
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 15:36:50 by abang             #+#    #+#             */
-/*   Updated: 2020/12/23 15:39:09 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/23 17:59:18 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_putnbr_fd(int n, int fd)
 	char	*num;
 
 	num = ft_itoa(n);
-	ft_putstr_fd(n, fd);
+	ft_putstr_fd(num, fd);
 }
