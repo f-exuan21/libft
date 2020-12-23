@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 17:06:53 by abang             #+#    #+#             */
-/*   Updated: 2020/12/22 19:42:18 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/23 11:49:28 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char	*tmp;
+
 	tmp = (char *)s;
 	while (*tmp)
 	{
