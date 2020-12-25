@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 17:06:53 by abang             #+#    #+#             */
-/*   Updated: 2020/12/23 11:49:28 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/25 02:22:01 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return (tmp);
 		tmp++;
 	}
-	return (tmp);
+	if (*tmp == '\0' && c == '\0')
+		return (tmp);
+	return (NULL);
 }

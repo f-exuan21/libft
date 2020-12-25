@@ -6,13 +6,13 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 17:06:30 by abang             #+#    #+#             */
-/*   Updated: 2020/12/23 11:53:00 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/25 03:32:29 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char			*tmp;
 	unsigned int	len;

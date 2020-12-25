@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 15:36:50 by abang             #+#    #+#             */
-/*   Updated: 2020/12/23 17:59:18 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/25 23:06:21 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,16 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*num;
+	long long	num;
 
-	num = ft_itoa(n);
-	ft_putstr_fd(num, fd);
+	if (n < 0)
+	{
+		num = (-1) * (long long)n;
+		ft_putchar_fd('-', fd);
+	}
+	else
+		num = n;
+	if (num > 0)
+		ft_putnbr_fd(num / 10, fd);
+	ft_putchar_fd('0' + (num % 10), fd);
 }

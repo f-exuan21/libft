@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 17:06:50 by abang             #+#    #+#             */
-/*   Updated: 2020/12/22 19:33:47 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/25 15:20:47 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,14 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	tmp2 = (char *)to_find;
 	i = 0;
 	l = ft_strlen(tmp2);
-	while (i + l <= len)
+	if (*tmp2 == '\0')
+		return (tmp);
+	while ((i + l <= len) || !str)
 	{
-		if (!ft_memcmp(tmp, tmp2, l))
+		if ((*tmp == *tmp2) && !ft_memcmp(tmp, tmp2, l))
 			return (tmp);
 		tmp++;
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

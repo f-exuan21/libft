@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 12:42:26 by abang             #+#    #+#             */
-/*   Updated: 2020/12/23 13:41:54 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/25 22:28:00 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,24 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			s++;
 		str_arr[i] = ft_splitstr(s, c);
-		while (*s != c)
+		while (*s != c && *s != '\0')
 			s++;
 		i++;
 	}
+	str_arr[i] = NULL;
 	return (str_arr);
+}
+
+#include <stdio.h>
+int		main()
+{
+	char	*str = "	split		this	for	me	!	";
+	char	**rst = ft_split(str, '	');
+	while (*rst)
+	{
+		printf("%s,\n", *rst);
+		rst++;
+	}
+	printf("%s,\n", *rst);
+	return (0);
 }

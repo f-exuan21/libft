@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 17:26:28 by abang             #+#    #+#             */
-/*   Updated: 2020/12/23 11:52:06 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/25 15:57:53 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		i;
 
 	if (!(tmp = malloc((len + 1) * sizeof(char))))
-		return (0);
+		return (NULL);
 	i = 0;
+	if (ft_strlen(s) <= start)
+	{
+		*tmp = '\0';
+		return (tmp);
+	}
 	while (*(s + start + i) && i < len)
 	{
 		tmp[i] = *(s + start + i);
