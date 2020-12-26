@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 13:42:45 by abang             #+#    #+#             */
-/*   Updated: 2020/12/25 22:33:29 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/26 15:45:57 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,18 @@ char	*ft_itoa(int n)
 	int		len;
 	int		i;
 	int		mod;
+	int		flag;
 
 	len = ft_intlen(n);
-	if (!(str = malloc(sizeof(char) * (len + 1))))
+	flag = n >= 0 ? 1 : 2;
+	if (!(str = malloc(sizeof(char) * (len + flag))))
 		return (0);
 	i = 0;
 	while (i < len)
 	{
 		mod = n % 10;
-		str[i] = (mod < 0 ? '0' - mod : '0' + mod);
+		str[i++] = (mod < 0 ? '0' - mod : '0' + mod);
 		n /= 10;
-		i++;
 	}
 	if (mod < 0)
 	{
