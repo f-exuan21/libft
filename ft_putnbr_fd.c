@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 15:36:50 by abang             #+#    #+#             */
-/*   Updated: 2020/12/25 23:06:21 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/27 12:52:45 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 		num = n;
-	if (num > 0)
+	if (num > 9)
 		ft_putnbr_fd(num / 10, fd);
 	ft_putchar_fd('0' + (num % 10), fd);
 }

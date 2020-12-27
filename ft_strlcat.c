@@ -6,13 +6,13 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 14:54:11 by abang             #+#    #+#             */
-/*   Updated: 2020/12/26 15:43:48 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/26 22:03:28 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char	*dst, const char *src, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {
 	unsigned int	i;
 	unsigned int	j;

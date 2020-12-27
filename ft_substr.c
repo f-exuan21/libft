@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 17:26:28 by abang             #+#    #+#             */
-/*   Updated: 2020/12/25 15:57:53 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/26 21:58:40 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*tmp;
-	int		i;
+	char				*tmp;
+	unsigned int		i;
 
 	if (!(tmp = malloc((len + 1) * sizeof(char))))
 		return (NULL);

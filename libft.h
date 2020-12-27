@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 11:03:31 by abang             #+#    #+#             */
-/*   Updated: 2020/12/26 15:49:02 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/26 22:31:54 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,5 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 							void (*del)(void *));
 size_t				ft_strlcat(char	*restrict dst, const char *restrict src,
 							size_t n);
-
+char				*ft_strdup(const char *s1);
 #endif

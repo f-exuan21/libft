@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 11:54:22 by abang             #+#    #+#             */
-/*   Updated: 2020/12/25 21:24:59 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/27 14:08:49 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	j;
 	unsigned int	len;
 
+	str = NULL;
 	if (!s1 || !set)
 		return (0);
 	i = 0;
 	while (s1[i] && ft_comp(s1[i], set))
 		i++;
 	len = ft_strlen(s1);
-	if (len-- == 0)
+	if (len != 0)
 	{
-		*str = '\0';
-		return (str);
-	}
-	while (len > 0 && s1[len] && ft_comp(s1[len], set))
 		len--;
+		while (len > 0 && s1[len] && ft_comp(s1[len], set))
+			len--;
+	}
+	j = 0;
 	if (!(str = malloc((len - i + 2) * sizeof(char))))
 		return (0);
-	j = 0;
-	while (i <= len)
+	while (len != 0 && i <= len)
 		str[j++] = s1[i++];
 	str[j] = '\0';
 	return (str);
