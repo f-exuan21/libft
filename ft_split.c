@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 12:42:26 by abang             #+#    #+#             */
-/*   Updated: 2020/12/27 14:09:25 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/27 14:38:10 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,20 @@ int		ft_split_str_len(char **s, char c)
 	return (len);
 }
 
+char	**ft_free(char **str, int i)
+{
+	int		j;
+
+	j = 0;
+	while (j < i)
+	{
+		free(str[j]);
+		j++;
+	}
+	free(str);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**str_arr;
@@ -76,7 +90,7 @@ char	**ft_split(char const *s, char c)
 		if (*tmp && *tmp != c)
 			len = ft_split_str_len(&tmp, c);
 		if (!(str_arr[i] = malloc(sizeof(char) * (len + 1))))
-			return (NULL);
+			return (ft_free(str_arr, i));
 		ft_strlcpy(str_arr[i++], tmp - len, len + 1);
 	}
 	str_arr[i] = NULL;
