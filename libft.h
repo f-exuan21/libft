@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 11:03:31 by abang             #+#    #+#             */
-/*   Updated: 2020/12/26 22:31:54 by abang            ###   ########.fr       */
+/*   Updated: 2020/12/27 14:14:22 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *ptr, int value, unsigned int num);
 char				*strdup(const char *s1);
 char				*ft_strjoin(char const *s1, char const *s2);
-size_t				ft_strlcpy(char *restrict dst, const char *restrict src,
+size_t				ft_strlcpy(char *dst, const char *src,
 							size_t n);
 size_t				ft_strlen(const char *s);
 int					ft_strncmp(const char *s1, const char *s2,
@@ -68,7 +68,7 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 							void (*del)(void *));
-size_t				ft_strlcat(char	*restrict dst, const char *restrict src,
+size_t				ft_strlcat(char	*dst, const char *src,
 							size_t n);
 char				*ft_strdup(const char *s1);
 #endif
