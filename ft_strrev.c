@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/22 17:06:40 by abang             #+#    #+#             */
-/*   Updated: 2020/12/31 11:52:35 by abang            ###   ########.fr       */
+/*   Created: 2020/12/31 20:36:57 by abang             #+#    #+#             */
+/*   Updated: 2020/12/31 23:40:14 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strrev(char *str, int len)
 {
 	int		i;
+	char	tmp;
 
 	i = 0;
-	while (s[i])
+	while (i < len)
+	{
+		tmp = str[i];
+		str[i] = str[len - 1];
+		str[len - 1] = tmp;
+		len--;
 		i++;
-	return (i);
+	}
+	return (str);
 }

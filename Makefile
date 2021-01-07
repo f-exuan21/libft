@@ -11,6 +11,8 @@ SRC = 		ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 BONUS =		ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
+ADD =		ft_intlen.c ft_itoa.c ft_strrev.c
+
 CC = 		gcc
 
 CFLAGS = 	-Wall -Wextra -Werror
@@ -18,6 +20,8 @@ CFLAGS = 	-Wall -Wextra -Werror
 OBJ = 		$(SRC:.c=.o)
 
 BONUSOBJ =	$(BONUS:.c=.o)
+
+ADDOBJ =	$(ADD:.c=.o)
 
 RM = 		rm -rf
 
@@ -32,6 +36,9 @@ all: 		${NAME}
 bonus:		${OBJ} ${BONUSOBJ}
 			ar rc ${NAME} ${OBJ} ${BONUSOBJ}
 
+add:		${OBJ} ${BONUSOBJ} ${ADDOBJ}
+			ar rc ${NAME} ${OBJ} ${BONUSOBJ} ${ADDOBJ}
+
 clean:
 			${RM} *.o
 
@@ -40,4 +47,4 @@ fclean: 	clean
 
 re: 		fclean all
 
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re bonus add

@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 11:54:22 by abang             #+#    #+#             */
-/*   Updated: 2020/12/27 14:08:49 by abang            ###   ########.fr       */
+/*   Updated: 2021/01/07 17:34:42 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	j = 0;
 	if (!(str = malloc((len - i + 2) * sizeof(char))))
 		return (0);
-	while (len != 0 && i <= len)
+	while (i <= len)
 		str[j++] = s1[i++];
 	str[j] = '\0';
 	return (str);
