@@ -11,7 +11,8 @@ SRC = 		ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 BONUS =		ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-ADD =		ft_intlen.c ft_itoa.c ft_strrev.c
+ADD =		ft_intlen.c ft_itoa.c ft_strrev.c ft_putchar.c ft_putstr.c \
+			ft_tohexa.c
 
 CC = 		gcc
 

@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 11:03:31 by abang             #+#    #+#             */
-/*   Updated: 2020/12/27 14:14:22 by abang            ###   ########.fr       */
+/*   Updated: 2021/01/07 18:42:58 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,13 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 size_t				ft_strlcat(char	*dst, const char *src,
 							size_t n);
 char				*ft_strdup(const char *s1);
+int					ft_intlen(int n);
+int					ft_uintlen(unsigned int n);
+char				*ft_itoa(int n);
+char				*ft_uitoa(unsigned int n);
+char				*ft_strrev(char *str, int len);
+char				*ft_tohexa_p(unsigned long ul);
+char				*ft_tohexa_i(unsigned int j, int i);
+void				ft_putstr(char *s);
+void				ft_putchar(char c);
 #endif

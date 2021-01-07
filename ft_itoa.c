@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 13:42:45 by abang             #+#    #+#             */
-/*   Updated: 2021/01/07 17:32:16 by abang            ###   ########.fr       */
+/*   Updated: 2021/01/07 18:43:49 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,3 @@ char	*ft_uitoa(unsigned int n)
 	str = ft_strrev(str, len);
 	return (str);
 }
-
