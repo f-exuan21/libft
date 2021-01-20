@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:41:18 by abang             #+#    #+#             */
-/*   Updated: 2021/01/07 18:42:10 by abang            ###   ########.fr       */
+/*   Updated: 2021/01/10 15:55:43 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_tohexa_p(unsigned long ul)
 	unsigned long	tmp;
 
 	hexa = "0123456789abcdef";
-	len = 0;
+	len = (ul == 0 ? 1 : 0);
 	tmp = ul;
 	while (tmp != 0)
 	{
@@ -29,6 +29,8 @@ char	*ft_tohexa_p(unsigned long ul)
 	}
 	if (!(str = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
+	str[0] = '0';
+	str[len] = 0;
 	while (ul != 0)
 	{
 		str[--len] = hexa[ul % 16];
@@ -45,7 +47,7 @@ char	*ft_tohexa_i(unsigned int j, int i)
 	unsigned int	tmp;
 
 	hexa = (i == 0) ? "0123456789abcdef" : "0123456789ABCDEF";
-	len = 0;
+	len = (i == 0 ? 1 : 0);
 	tmp = j;
 	while (tmp != 0)
 	{
@@ -54,6 +56,8 @@ char	*ft_tohexa_i(unsigned int j, int i)
 	}
 	if (!(str = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
+	str[0] = '0';
+	str[len] = 0;
 	while (j != 0)
 	{
 		str[--len] = hexa[j % 16];
