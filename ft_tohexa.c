@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:41:18 by abang             #+#    #+#             */
-/*   Updated: 2021/01/10 15:55:43 by abang            ###   ########.fr       */
+/*   Updated: 2021/01/25 12:09:19 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_tohexa_i(unsigned int j, int i)
 	unsigned int	tmp;
 
 	hexa = (i == 0) ? "0123456789abcdef" : "0123456789ABCDEF";
-	len = (i == 0 ? 1 : 0);
+	len = (j == 0 ? 1 : 0);
 	tmp = j;
 	while (tmp != 0)
 	{
