@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 11:03:31 by abang             #+#    #+#             */
-/*   Updated: 2021/05/02 13:16:10 by abang            ###   ########.fr       */
+/*   Updated: 2021/05/03 00:55:12 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # include <limits.h>
 
 # ifndef __STLIST__
-# define __STLIST__
+#  define __STLIST__
+
 typedef struct		s_list
 {
 	char			*content;
