@@ -6,7 +6,7 @@
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 11:03:31 by abang             #+#    #+#             */
-/*   Updated: 2021/01/07 18:42:58 by abang            ###   ########.fr       */
+/*   Updated: 2021/05/02 13:16:10 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@
 # include <unistd.h>
 # include <limits.h>
 
+# ifndef __STLIST__
+# define __STLIST__
 typedef struct		s_list
 {
-	void			*content;
+	char			*content;
+	int				status;
 	struct s_list	*next;
 }					t_list;
+# endif
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *ptr, size_t size);
@@ -80,4 +84,8 @@ char				*ft_tohexa_p(unsigned long ul);
 char				*ft_tohexa_i(unsigned int j, int i);
 void				ft_putstr(char *s);
 void				ft_putchar(char c);
+
+int					ft_strcmp(char *str1, char *str2);
+float				ft_atof(char *s);
+int					ft_isfloat(char *str);
 #endif

@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_isfloat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/22 17:33:50 by abang             #+#    #+#             */
-/*   Updated: 2021/01/28 12:29:57 by abang            ###   ########.fr       */
+/*   Created: 2021/05/02 13:15:10 by abang             #+#    #+#             */
+/*   Updated: 2021/05/02 18:07:05 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int			ft_isfloat(char *str)
 {
-	char	*tmp;
-	int		i;
-	int		j;
+	int		dot_flag;
 
-	if (!(tmp = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * (sizeof(char)))))
-		return (0);
-	i = 0;
-	while (s1[i])
+	dot_flag = 0;
+	if (*str == '-')
+		str++;
+	while (*str)
 	{
-		tmp[i] = s1[i];
-		i++;
+		if (*str == '.' && !dot_flag)
+			dot_flag = 1;
+		else if (*str == '.' && dot_flag)
+			return (0);
+		else
+		{
+			if (!ft_isdigit(*str))
+				return (0);
+		}
+		str++;
 	}
-	j = 0;
-	while (s2[j])
-		tmp[i++] = s2[j++];
-	tmp[i] = '\0';
-	return (tmp);
+	return (1);
 }

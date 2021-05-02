@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abang <abang@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/22 17:33:50 by abang             #+#    #+#             */
-/*   Updated: 2021/01/28 12:29:57 by abang            ###   ########.fr       */
+/*   Created: 2021/04/30 19:39:47 by abang             #+#    #+#             */
+/*   Updated: 2021/05/01 15:35:28 by abang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int		ft_strcmp(char *str1, char *str2)
 {
-	char	*tmp;
-	int		i;
-	int		j;
+	unsigned int	i;
 
-	if (!(tmp = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * (sizeof(char)))))
-		return (0);
 	i = 0;
-	while (s1[i])
+	while (str1[i] != 0 || str2[i] != 0)
 	{
-		tmp[i] = s1[i];
+		if (str1[i] != str2[i])
+			return ((int)str1[i] - (int)str2[i]);
 		i++;
 	}
-	j = 0;
-	while (s2[j])
-		tmp[i++] = s2[j++];
-	tmp[i] = '\0';
-	return (tmp);
+	return (0);
 }
